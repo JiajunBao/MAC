@@ -1,7 +1,11 @@
 mkdir downloads
 # download visual features
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vFxDw4AkGVgfILH-6xaHofLZ7PbWwFC2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1vFxDw4AkGVgfILH-6xaHofLZ7PbWwFC2" -O /local2/jiajunb/MAC/charades_sta_visual_feature.tar && rm -rf /tmp/cookies.txt
 
 # visual activity concepts
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1biKPDmb7hbzowKLMIRSTLE0w_tWbGPAe' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1biKPDmb7hbzowKLMIRSTLE0w_tWbGPAe" -O /local2/jiajunb/MAC/charades_sta_visual_activity_concepts.tar && rm -rf /tmp/cookies.txt
+
 # ref_info
-# 
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=16rFGu9rnhnH-WQeUmN7VtMgljrhGspll' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=16rFGu9rnhnH-WQeUmN7VtMgljrhGspll" -O /local2/jiajunb/MAC/ref_info.tar && rm -rf /tmp/cookies.txt
+
 
