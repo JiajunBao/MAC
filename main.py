@@ -233,14 +233,14 @@ def run_training():
 
     # visual feature for each video clip
     # the fc6 layer outputs of C3D pretraiend on Sprots-1M, 4096-dimension
-    train_feature_dir = "/change/directory/to/all_fc6_unit16_overlap0.5/"
-    test_feature_dir = "/change/directory/to/all_fc6_unit16_overlap0.5/"
+    train_feature_dir = "/local2/jiajunb/MAC/charades_sta_visual_feature/all_fc6_unit16_overlap0.5"
+    test_feature_dir = "/local2/jiajunb/MAC/charades_sta_visual_feature/all_fc6_unit16_overlap0.5"
 
 
     # visual activity concepts for each video clip
     # the softmax layer ouput of R(2+1)D pretraiend on Kinetics, 400-demension
-    train_softmax_dir = '/change/directory/to/train_softmax/'
-    test_softmax_dir = '/change/directory/to/test_softmax/'
+    train_softmax_dir = '/local2/jiajunb/MAC/charades_sta_visual_activity_concepts/train_softmax'
+    test_softmax_dir = '/local2/jiajunb/MAC/charades_sta_visual_activity_concepts/test_softmax'
 
 
 
@@ -251,8 +251,8 @@ def run_training():
     # this is originally from https://github.com/jiyanggao/TALL
     # we didn't use the setence embdedding provided in these files
     # we use our own sentence embedding which will appear later
-    train_csv_path = "./ref_info/charades_sta_train_clip-sentvec_o0.5_l10_activity_nodup.pkl"
-    test_csv_path = "./ref_info/charades_sta_test_clip-sentvec_o0.5_l10_activity_nodup.pkl"    
+    train_csv_path = "/local2/jiajunb/MAC/ref_info/charades_sta_train_clip-sentvec_o0.5_l10_activity_nodup.pkl"
+    test_csv_path = "/local2/jiajunb/MAC/ref_info/charades_sta_test_clip-sentvec_o0.5_l10_activity_nodup.pkl"
   
 
  
@@ -267,8 +267,8 @@ def run_training():
  
     # sentece embedding is extracted by skip-thoughts (4800-dimesnion)
     # verb-object vector is extracted by stanford glove (300-dimension)
-    train_clip_sentence_pairs_iou_path = "./ref_info/charades_sta_train_semantic_sentence_VP_sub_obj.pkl" 
-    test_clip_sentence_pairs_path = './ref_info/charades_sta_test_semantic_sentence_VP_sub_obj.pkl'
+    train_clip_sentence_pairs_iou_path = "/local2/jiajunb/MAC/ref_info/charades_sta_train_semantic_sentence_VP_sub_obj.pkl"
+    test_clip_sentence_pairs_path = '/local2/jiajunb/MAC/ref_info/charades_sta_test_semantic_sentence_VP_sub_obj.pkl'
     
     # the propsal score used in test
     # trained on TURN TAP, https://github.com/jiyanggao/TURN-TAP
@@ -276,7 +276,7 @@ def run_training():
     # 0: name; 1: swin_start; 2:swin_end; 3: round_reg_start;
     # 4: round_reg_end; 5: reg_start; 6:reg_end; 7: proposal_confident_score; 
     # 8: others; 9: others
-    test_swin_txt_path = "./ref_info/charades_sta_test_swin_props_num_36364.txt"
+    test_swin_txt_path = "/local2/jiajunb/MAC/ref_info/charades_sta_test_swin_props_num_36364.txt"
 
 
     # arguments
@@ -315,7 +315,7 @@ def run_training():
             saver.restore(sess, checkpoint_path)
             print "Model restored from " + checkpoint_path, "----------------------------------\n"
             movie_length_dict={}
-            with open("./ref_info/charades_movie_length_info.txt") as f:
+            with open("/local2/jiajunb/MAC/ref_info/charades_movie_length_info.txt") as f:
                 for l in f:
                     movie_length_dict[l.rstrip().split(" ")[0]]=float(l.rstrip().split(" ")[2])
             
@@ -371,7 +371,7 @@ def run_training():
 
                         print "Start to test:-----------------\n"
                         movie_length_dict={}
-                        with open("./ref_info/charades_movie_length_info.txt") as f:
+                        with open("/local2/jiajunb/MAC/ref_info/charades_movie_length_info.txt") as f:
                             for l in f:
                                 movie_length_dict[l.rstrip().split(" ")[0]]=float(l.rstrip().split(" ")[2])
 
@@ -414,7 +414,7 @@ def run_training():
 
                         print "Start to test:-----------------\n"
                         movie_length_dict={}
-                        with open("./ref_info/charades_movie_length_info.txt") as f:
+                        with open("/local2/jiajunb/MAC/ref_info/charades_movie_length_info.txt") as f:
                             for l in f:
                                 movie_length_dict[l.rstrip().split(" ")[0]]=float(l.rstrip().split(" ")[2])
 
