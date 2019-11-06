@@ -4,7 +4,7 @@
 *.tar.gz
 
 env
-
+srun
 ref_info/*
 !ref_info/.gitkeep
 
