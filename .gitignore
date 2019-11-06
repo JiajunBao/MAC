@@ -3,6 +3,8 @@
 *.tar
 *.tar.gz
 
+env
+
 ref_info/*
 !ref_info/.gitkeep
 
