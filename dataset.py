@@ -44,7 +44,7 @@ class TrainingDataSet(object):
         self.counter=0
         self.stage_1_iter=5000
         self.batch_size=batch_size
-        print "Reading training data list from "+it_path
+        print "Reading training data list from "+str(it_path)
         cs=pickle.load(open(it_path))
         self.clip_sentence_pairs=cs
 
