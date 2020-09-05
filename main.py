@@ -253,7 +253,7 @@ def run_training():
 
     # clip ground truth and corresponding sentence embedding
     # this is originally from https://github.com/jiyanggao/TALL
-    # we didn't use the setence embdedding provided in these files
+    # we didn't use the sentence embedding provided in these files
     # we use our own sentence embedding which will appear later
     train_csv_path = args.root / "ref_info/charades_sta_train_clip-sentvec_o0.5_l10_activity_nodup.pkl"
     test_csv_path = args.root / "ref_info/charades_sta_test_clip-sentvec_o0.5_l10_activity_nodup.pkl"
